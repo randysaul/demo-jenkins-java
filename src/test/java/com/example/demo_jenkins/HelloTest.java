@@ -14,7 +14,7 @@ public class HelloTest {
 	String mensaje = hola.sayHello();
 	
 	@Test
-	void probarClase(){
+	public void probarClase(){
 		assertEquals("Hello World", mensaje);
 	}
 
