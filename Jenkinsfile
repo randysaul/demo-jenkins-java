@@ -50,10 +50,13 @@ pipeline {
 
         stage('4. Analizar con SonarQube') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv(
+                    installationName: 'SonarQube',
+                    credentialsId: 'sonarqube-token'
+                ) {
                     sh '''
                         mvn \
-                        org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+                        org.sonarsource.scanner.maven:sonar-maven-plugin:5.7.0.6970:sonar \
                         -Dsonar.projectKey=demo-jenkins \
                         -Dsonar.projectName=demo-jenkins
                     '''
