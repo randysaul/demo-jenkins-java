@@ -95,5 +95,10 @@
     		<artifactId>jstl</artifactId>
     		<version>1.2</version>
 		</dependency>
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet-shaded</artifactId>
+            <version>3.1.9.Final</version>
+        </dependency>
     </dependencies>
 </project>
